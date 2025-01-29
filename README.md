@@ -40,31 +40,27 @@ npm run ios
 
 # Project Structure
 
-📦 src
-┣ 📂 components
-┃ ┣ 📂 SomeComponent
-┃ ┃ ┗ 📜 index.tsx # Component main file
-┃ ┃ ┗ 📜 styles.ts # Component styles
-
-┣ 📂 hooks
-┃ ┗ 📜 useSomeHook.ts # Custom React hooks
-┃ ┗ 📜 index.ts # Hooks barrel file for exports
-
-┣ 📂 interfaces # TypeScript interfaces and types
-┣ 📂 lib # Third-party libraries configurations and utilities
-
-┣ 📂 redux
-┃ ┣ 📂 slice-name
-┃ ┃ ┗ 📜 index.ts # Slice exports
-┃ ┃ ┗ 📜 slice.ts # Redux slice definition
-┃ ┃ ┗ 📜 thunks.ts # Async actions (thunks)
-┃ ┗ 📜 index.ts # Redux root exports
-┃ ┗ 📜 store.ts # Redux store configuration
-
-┣ 📂 screens
-┃ ┣ 📂 SomeScreen
-┃ ┃ ┗ 📜 index.tsx # Screen component
-┃ ┃ ┗ 📜 styles.ts # Screen-specific styles
+📦 src  
+┣ 📂 components  
+┃ ┣ 📂 SomeComponent  
+┃ ┃ ┣ 📜 index.tsx # Component main file  
+┃ ┃ ┗ 📜 styles.ts # Component styles  
+┣ 📂 hooks  
+┃ ┣ 📜 useSomeHook.ts # Custom React hooks  
+┃ ┗ 📜 index.ts # Hooks barrel file for exports  
+┣ 📂 interfaces # TypeScript interfaces and types  
+┣ 📂 lib # Third-party libraries configurations and utilities  
+┣ 📂 redux  
+┃ ┣ 📂 slice-name  
+┃ ┃ ┣ 📜 index.ts # Slice exports  
+┃ ┃ ┣ 📜 slice.ts # Redux slice definition  
+┃ ┃ ┗ 📜 thunks.ts # Async actions (thunks)  
+┃ ┣ 📜 index.ts # Redux root exports  
+┃ ┗ 📜 store.ts # Redux store configuration  
+┣ 📂 screens  
+┃ ┣ 📂 SomeScreen  
+┃ ┃ ┣ 📜 index.tsx # Screen component  
+┃ ┃ ┗ 📜 styles.ts # Screen-specific styles  
 ┗ 📜 App.tsx # Root application component
 
 ## Directory Structure Overview
