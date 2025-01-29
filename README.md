@@ -4,21 +4,7 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 > **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
 
-## Step 1: Start Metro
-
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
-
-To start the Metro dev server, run the following command from the root of your React Native project:
-
-```sh
-# Using npm
-npm start
-
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Build and run your app
+## Step 1: Build and run your app
 
 With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
 
@@ -27,9 +13,6 @@ With Metro running, open a new terminal window/pane from the root of your React 
 ```sh
 # Using npm
 npm run android
-
-# OR using Yarn
-yarn android
 ```
 
 ### iOS
@@ -53,45 +36,70 @@ For more information, please visit [CocoaPods Getting Started guide](https://gui
 ```sh
 # Using npm
 npm run ios
-
-# OR using Yarn
-yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+# Project Structure
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+📦 src
+┣ 📂 components
+┃ ┣ 📂 SomeComponent
+┃ ┃ ┗ 📜 index.tsx # Component main file
+┃ ┃ ┗ 📜 styles.ts # Component styles
 
-## Step 3: Modify your app
+┣ 📂 hooks
+┃ ┗ 📜 useSomeHook.ts # Custom React hooks
+┃ ┗ 📜 index.ts # Hooks barrel file for exports
 
-Now that you have successfully run the app, let's make changes!
+┣ 📂 interfaces # TypeScript interfaces and types
+┣ 📂 lib # Third-party libraries configurations and utilities
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+┣ 📂 redux
+┃ ┣ 📂 slice-name
+┃ ┃ ┗ 📜 index.ts # Slice exports
+┃ ┃ ┗ 📜 slice.ts # Redux slice definition
+┃ ┃ ┗ 📜 thunks.ts # Async actions (thunks)
+┃ ┗ 📜 index.ts # Redux root exports
+┃ ┗ 📜 store.ts # Redux store configuration
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+┣ 📂 screens
+┃ ┣ 📂 SomeScreen
+┃ ┃ ┗ 📜 index.tsx # Screen component
+┃ ┃ ┗ 📜 styles.ts # Screen-specific styles
+┗ 📜 App.tsx # Root application component
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+## Directory Structure Overview
 
-## Congratulations! :tada:
+- **components**: Reusable UI components, each in its own directory with component logic and styles
+- **hooks**: Custom React hooks for shared logic across components
+- **interfaces**: TypeScript type definitions and interfaces
+- **lib**: Library configurations and third-party integrations
+- **redux**: State management using Redux Toolkit
+  - Individual feature slices with their actions and reducers
+  - Async operations (thunks)
+  - Store configuration
+- **screens**: Main application views/pages
+  - Each screen in its own directory
+  - Contains screen-specific components and styles
 
-You've successfully run and modified your React Native App. :partying_face:
+# Project Dependencies
 
-### Now what?
+### Navigation
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+- **@react-navigation/bottom-tabs** (v7.2.0): Bottom tab navigation implementation
+- **@react-navigation/native** (v7.0.14): Core navigation library for React Native
 
-# Troubleshooting
+### State Management
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+- **@reduxjs/toolkit** (v2.5.1): Official Redux toolset for efficient Redux development
+- **react-redux** (v9.2.0): Official React bindings for Redux
+- **redux-persist** (v6.0.0): Persist and rehydrate Redux stores
+- **@react-native-async-storage/async-storage** (v2.1.0): Asynchronous storage system
 
-# Learn More
+### Networking
 
-To learn more about React Native, take a look at the following resources:
+- **axios** (v1.7.9): Promise-based HTTP client for API requests
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+### Forms and Validation
+
+- **formik** (v2.4.6): Form management library
+- **yup** (v1.6.1): Schema validation library
